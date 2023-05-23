@@ -16,7 +16,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #000000;
   color: #ffffff;
-  cursor: url(img/cursor\ \(2\).cur), default;
+  
 
 }
 
@@ -78,42 +78,47 @@ body {
 /* ------------------sobre eu------------------*/
 
 
-
-
-.grid-container {
-  margin: 90px;
+.grid-mae {
+ 
   display: grid;
-  grid-template-columns: 80vh 80vh;
-  padding: 10px;
-  height: 60vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  /* background-color: aqua; */
+  justify-content: space-around;
+  
+  
 
 }
 
-.grid-item {
+
+/* .grid-item {
   background-image: linear-gradient(180deg, #fc1ca4, rgb(0, 0, 0));
   margin-left: 200px;
   border-radius: 100% 100% 10px 10px;
   width: 50vh;
-  height: 50vh;
+  height: 50vh; 
 
-
-
-}
+} */
 
 .grid-item1 {
-  margin-left: 80px;
+  
+  
+  /* background-color: #10e40c; */
+  
 
 }
-
-h1 {
+.grid-item2{
+  padding: 90px;
   text-align: center;
-  padding: 10px;
-
+  /* background-color: rgb(8, 52, 230); */
+  
 }
 
-h2 {
+
+h1, h2 {
   text-align: center;
-  margin: 40px;
+  font-size: 30px;
+  
 }
 
 span {
@@ -155,19 +160,26 @@ span {
   }
 }
 
+
+
 #corpo {
-  margin-top: 240px;
+  margin-bottom: 200px;
+  margin-left: 25%;
+  border-radius: 50% 50% 0px 0px;
+  background-image: linear-gradient(180deg, #fc1ca4, rgb(0, 0, 0));
+  
+  
 
 }
 
 
-
-
 #cabeca {
-  margin-top: 10px;
+ 
+  z-index: 10;
+  margin-top: 40px;
   width: 260px;
   position: absolute;
-  margin-left: 120px;
+  margin-left: 17.7%;
   animation-name: tossing;
   -webkit-animation-name: tossing;
   animation-duration: 3.5s;
@@ -211,11 +223,12 @@ span {
 /*_______________________Conteudo-sites__________________________*/
 
 
-.grid-container1 {
+.grid-pai {
   display: grid;
   grid-template-columns: 63vh 63vh 63vh;
   /* background-color: #de0c1d; */
   padding: 10px;
+ 
 
 
 
@@ -235,11 +248,12 @@ span {
   height: 80%;
   display: grid;
   border-radius: 10px;
+  
 
 }
 
 
-/*teste*/
+/* ------------- Efeito colorido nas fotos -------------------*/
 
 
 
@@ -253,6 +267,7 @@ span {
   position: relative;
   z-index: 0;
   border-radius: 10px;
+ 
 }
 
 .glow-on-hover:before {
@@ -274,6 +289,7 @@ span {
 
 .glow-on-hover:active {
   color: #000
+ 
 }
 
 .glow-on-hover:active:after {
@@ -295,6 +311,10 @@ span {
   top: 0;
   border-radius: 10px;
 }
+
+/* .glow-on-hover:hover{
+  transform: scale(1.1);
+} */
 
 @keyframes glowing {
   0% {
@@ -328,7 +348,7 @@ span {
 .conteiner {
 
 
-  background-color: #fd060600;
+  background-color: #000000;
   display: grid;
   grid-template-columns: 1fr minmax(100px, 50%) 1fr;
   width: 100%;
@@ -336,14 +356,14 @@ span {
 }
 
 .co {
-  background-color: rgba(0, 255, 255, 0);
+  background-color: rgb(0, 0, 0);
   display: grid;
   align-items: center;
 
 }
 
 .con {
-  background-color: rgba(163, 255, 127, 0);
+  background-color: rgb(0, 0, 0);
   display: grid;
 
 }
@@ -424,34 +444,38 @@ div.fish {
 
 
 
-
-
-
 @media screen and (max-width: 768px) {
 
+
+  h2{
+    display: grid;
+    
+  }
 
 
   body {
 
-    width: 80%;
-    display: inline-block;
+    width: 100%;
+    display: grid;
 
   }
 
-  .grid-item {
-    display: none;
+  .grid-item1 {
+    
   }
 
-  .grid-container {
+  .grid-mae {
     display: inline-block;
     flex-direction: column;
-    margin: auto;
+    align-items: center;
   }
 
 
-  .grid-container1 {
+  .grid-pai {
 
     display: inline-block;
+    background-color: #ef09fb;
+    margin-top: 300px;
 
 
   }
@@ -472,10 +496,18 @@ div.fish {
     margin: auto;
   }
 
+  button.go-top-btn{
+
+    
+    
+    
+    
+  
+
 }
 
 
-@media screen and (min-width: 1500px) {
+/* @media screen and (min-width: 1500px) {
   body {
     background-color: #000000;
   }
@@ -488,6 +520,8 @@ div.fish {
     width: 60vh;
     height: 60vh;
     margin: 10px;
+    align-items: center;
+    display: inline-block;
     
 
   }
@@ -507,7 +541,7 @@ div.fish {
     margin: 0px;
     font-size: 35px;
 
-  }
+  } */
   
   
   }
